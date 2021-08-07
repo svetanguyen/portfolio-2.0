@@ -56,7 +56,7 @@ export default {
 
 <style lang="scss" scoped>
     .header-wrapper {
-        border-bottom: 2px solid #AAA;
+        border-bottom: 2px solid var(--gray);
         padding-top: 5px;
         padding-bottom: 6px;
         header {
@@ -94,10 +94,10 @@ export default {
                 margin: 0;
             }
             &:hover {
-                background: #F31D9E;
+                background: var(--pink);
             }
             span {
-                color: #F4ED46;
+                color: var(--yellow);
             }
         }
 
@@ -108,8 +108,8 @@ export default {
         
 
         .mobile-nav {
-            background: #212121;
-            border: 2px solid #AAA;
+            background: var(--background);
+            border: 2px solid var(--gray);
             position: absolute;
             left: 0;
             top: 0;
@@ -121,7 +121,7 @@ export default {
                 padding: 10px 41px;  
                 margin: 0;
                 &:focus {
-                    background: #F31D9E;
+                    background: var(--pink);
                 }              
             }
         }
@@ -130,7 +130,7 @@ export default {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 2px solid #AAAAAA;
+            border-bottom: 2px solid var(--gray);
             padding-bottom: 9px;
         }
 

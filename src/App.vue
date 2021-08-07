@@ -15,6 +15,15 @@ export default {
 </script>
 
 <style lang="scss">
+  
+  :root {
+    --pink: #F31D9E; 
+    --pink-light: #FF73D4;
+    --yellow: #F4ED46;
+    --gray: #AAA;
+    --background: #212121;
+  }
+
   @font-face {
     font-family: 'VT323';
     src: url('/fonts/VT323-Regular.eot');
@@ -37,7 +46,7 @@ export default {
   }
 
   body {
-    background: #212121;
+    background: var(--background);
   }
 
   .container {
