@@ -135,7 +135,7 @@ export default {
         }
 
         .mobile-nav-enter-active, .mobile-nav-leave-active {
-            transition: .3s all ease-in-out;
+            transition: .05s all ease-in-out;
         }
 
         .mobile-nav-enter, .mobile-nav-leave-to {
