@@ -81,11 +81,20 @@ export default {
             display: none;
             font-size: 36px;
             line-height: 36px;
-            router-link {
-                margin-left: 70px;
-                &:first-child {
-                    margin: 0;
-                }
+                       
+        }
+
+        .link {
+            margin-left: 50px;
+            display: inline-block;
+            padding: 10px 22px 11px 20px;
+            cursor: pointer;
+            color: #fff;
+            &:first-child {
+                margin: 0;
+            }
+            &:hover {
+                background: #F31D9E;
             }
             span {
                 color: #F4ED46;
@@ -105,6 +114,16 @@ export default {
             left: 0;
             top: 0;
             width: 100%;
+            .link {
+                display: block;
+                font-size: 34px;
+                line-height: 34px;
+                padding: 10px 41px;  
+                margin: 0;
+                &:focus {
+                    background: #F31D9E;
+                }              
+            }
         }
 
         .mobile-nav--header {
@@ -126,8 +145,10 @@ export default {
         @media screen and (min-width: 749px) {
             font-size: 49px;
             line-height: 49px;
+            padding-top: 0;
+            padding-bottom: 0;          
             .menu-links {
-                display: block;
+                display: block;               
             }
             .menu-icon {
                 display: none;
@@ -141,7 +162,7 @@ export default {
                 font-size: 30px;
                 line-height: 30px;
                 router-link {
-                    margin-left: 30px;
+                    margin-left: 10px;
                     &:first-child {
                         margin: 0;
                     }

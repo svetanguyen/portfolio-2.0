@@ -48,6 +48,9 @@ export default {
       max-width: 1260px;
       padding: 0 100px;
     }    
+    @media screen and (min-width: 749px) and (max-width: 1008px) {
+      padding: 0 50px;
+    }
   }
 
 
