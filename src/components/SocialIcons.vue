@@ -29,5 +29,12 @@ export default {
 <style lang="scss">
     .social-icons {
         display: flex;
+        padding-top: 21px;
+        svg {
+            vertical-align: middle;
+        }
+        @media screen and (min-width: 749px) {
+            padding: 0;
+        }
     }
 </style>
