@@ -19,7 +19,7 @@ export default {
         color: #fff;
         font-size: 36px;
         line-height: 36px;
-                       
+        background: var(--background);                       
     }    
 
     .link {

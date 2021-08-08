@@ -49,6 +49,8 @@ footer {
         line-height: 18px;
         color: #AAA;
         margin-top: 31px;
+        padding-bottom: 20px;
+
     }
 
     svg {
@@ -64,7 +66,9 @@ footer {
 
     @media screen and (max-width: 748px) {
         .container {
-            padding: 0;
+            &:first-child {
+                padding: 0;
+            }
         }
         h2 {
             padding: 25px 25px 19.5px;
@@ -84,6 +88,7 @@ footer {
             font-size: 49px;
             line-height: 49px;
         }
+       
         
     }
 
@@ -92,6 +97,10 @@ footer {
             display: flex;
             justify-content: space-between;
             align-items: center;            
+        }
+         .copyright {
+            margin-top: 17px;
+            padding-bottom: 17px;
         }
     }
 

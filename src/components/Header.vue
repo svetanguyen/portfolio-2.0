@@ -85,6 +85,7 @@ export default {
             left: 0;
             top: 0;
             width: 100%;
+            z-index: 1;
             .link {
                 display: block;
                 font-size: 34px;
