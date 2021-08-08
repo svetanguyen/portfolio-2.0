@@ -1,15 +1,19 @@
 <template>
   <div id="app">
     <Header />
+    <router-view />
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
 export default {
   name: 'App',
   components: {   
-    Header 
+    Header,
+    Footer
   }
 }
 </script>
@@ -45,8 +49,23 @@ export default {
     font-weight: normal;
   }
 
+  ul {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
   body {
     background: var(--background);
+  }
+
+  .mobileHidden {
+     display: none;
+     @media screen and (min-width: 749px) {
+      display: block;
+    }    
   }
 
   .container {

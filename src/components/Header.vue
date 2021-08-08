@@ -3,27 +3,19 @@
       <header class="container">
         <nav class="desktop-nav">
            <h1>Sveta</h1>
-           <ul class="menu-links">
-                <router-link class="link" to="#"><span>H</span>ome</router-link>
-                <router-link class="link" to="#"><span>W</span>orks</router-link>
-                <router-link class="link" to="#"><span>A</span>bout</router-link>
-                <router-link class="link" to="#"><span>C</span>ontact</router-link>
-           </ul>
+           <menu-links :mobileShow="false" />
         </nav>
         <menu-icon @click="toggleMobileNav" class="menu-icon" />
 
       </header>
       <transition name="mobile-nav">
-        <ul class="mobile-nav" v-show="mobileNav">
+        <div class="mobile-nav" v-show="mobileNav">
             <div class="mobile-nav--header container">
                 <h3>navigation</h3>
                 <close-icon @click="closeMobileNav" />
             </div>
-             <router-link class="link" to="#"><span>H</span>ome</router-link>
-            <router-link class="link" to="#"><span>W</span>orks</router-link>
-            <router-link class="link" to="#"><span>A</span>bout</router-link>
-              <router-link class="link" to="#"><span>C</span>ontact</router-link>
-        </ul>
+            <menuLinks :mobileShow="true" />
+        </div>
       </transition>
      
   </div>
@@ -32,6 +24,7 @@
 <script>
 import menuIcon from '../assets/icons/menu.svg'
 import closeIcon from '../assets/icons/close.svg'
+import menuLinks from './MenuLinks.vue'
 export default {
     name: 'page-header',
     data() {
@@ -41,7 +34,8 @@ export default {
     },
     components: {
         menuIcon,
-        closeIcon
+        closeIcon,
+        menuLinks
     },
     methods: {
         toggleMobileNav() {
@@ -76,30 +70,7 @@ export default {
             line-height: 46px;
         }        
 
-        .menu-links {
-            color: #fff;
-            display: none;
-            font-size: 36px;
-            line-height: 36px;
-                       
-        }
-
-        .link {
-            margin-left: 50px;
-            display: inline-block;
-            padding: 10px 22px 11px 20px;
-            cursor: pointer;
-            color: #fff;
-            &:first-child {
-                margin: 0;
-            }
-            &:hover {
-                background: var(--pink);
-            }
-            span {
-                color: var(--yellow);
-            }
-        }
+       
 
         .menu-icon {
             width: 26px;
@@ -141,14 +112,13 @@ export default {
         .mobile-nav-enter, .mobile-nav-leave-to {
             transform: translateY(-100%);
         }
-        
-        @media screen and (min-width: 749px) {
-            font-size: 49px;
-            line-height: 49px;
+         @media screen and (min-width: 749px) {
+            
             padding-top: 0;
-            padding-bottom: 0;          
-            .menu-links {
-                display: block;               
+            padding-bottom: 0;                     
+            h1 {
+                font-size: 49px;
+                line-height: 49px;
             }
             .menu-icon {
                 display: none;
@@ -156,19 +126,6 @@ export default {
 
 
         }
-
-        @media screen and (min-width: 749px) and (max-width: 1008px) {
-            .menu-links {       
-                font-size: 30px;
-                line-height: 30px;
-                router-link {
-                    margin-left: 10px;
-                    &:first-child {
-                        margin: 0;
-                    }
-                }
-            }
-        }        
-
+        
     }    
 </style>
