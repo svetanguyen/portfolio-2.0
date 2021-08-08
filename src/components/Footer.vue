@@ -5,6 +5,10 @@
            <menu-links :mobileShow="true" />
            <social-icons />
       </nav>
+      <div class="copyright container">
+          <p>© Hang Nguyen 2021</p>
+          <p>Design: Tin Bui</p>
+      </div>
   </footer>
 </template>
 
@@ -35,6 +39,15 @@ footer {
                 margin-left: 0;
             }
         }
+    }
+
+    .copyright {
+        display: flex;
+        justify-content: space-between;
+        font-size: 18px;
+        line-height: 18px;
+        color: #AAA;
+        margin-top: 31px;
     }
 
     svg {
