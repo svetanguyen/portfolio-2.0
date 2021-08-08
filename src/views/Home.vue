@@ -1,7 +1,7 @@
 <template>
-  <div class="home-page">
+  <div class="home-page page">
       <div class="intro bordered-container">
-          <h3>Hello, I am</h3>
+          <h3 class="top-text">Hello, I am</h3>
           <h2><span>Hang</span> Nguyen</h2>
           <p>A <span>Front-End Web Developer</span> passionate about creating interactive applications and experiences on the web.</p>
           <div class="content-footer">
@@ -24,19 +24,7 @@ export default {
 </script>
 
 <style lang="scss">
-    .home-page {  
-        padding: 40px 25px;      
-        h3 {
-            position: absolute;
-            top: 0;
-            transform: translateY(-50%);
-            left: 16px;
-            color: #AAA;
-            font-size: 21px;
-            line-height: 140%;
-            background: var(--background);    
-            padding: 0 7px;       
-        }
+    .home-page {         
         h2 {
             font-size: 46px;
             line-height: 140%;
@@ -82,7 +70,6 @@ export default {
             
         }       
         @media screen and (min-width: 749px) {
-            padding: 140px 50px;
              & + footer {
                 nav {
                     display: none;
@@ -91,9 +78,6 @@ export default {
             h2 {
                 font-size: 70px;
                 padding-bottom: 14px;
-            }
-            h3 {
-                font-size: 36px;
             }
             p {
                 font-size: 36px;

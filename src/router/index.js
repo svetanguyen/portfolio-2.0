@@ -17,7 +17,7 @@ const routes = [
     }
   },
   {
-    path: "/",
+    path: "/about",
     name: "About",
     component: About,
     meta: {
@@ -25,7 +25,7 @@ const routes = [
     }
   },
   {
-    path: "/",
+    path: "/works",
     name: "Works",
     component: Works,
     meta: {
@@ -33,7 +33,7 @@ const routes = [
     }
   },
   {
-    path: "/",
+    path: "/contacts",
     name: "Contacts",
     component: Contacts,
     meta: {

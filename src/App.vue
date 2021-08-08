@@ -102,5 +102,55 @@ export default {
     }
   }
 
+  .two-columns {
+    @media screen and (min-width: 749px) {
+      display: flex;
+      .column {
+        width: 50%;
+      }
+    }
+   
+  }
+
+  .page {
+    padding: 40px 25px;
+    @media screen and (min-width: 749px) {
+      padding: 140px 50px;
+    }
+  }
+
+  .top-text {
+    position: absolute;
+    left: 16px;
+    top: 0;
+    color: #AAA;
+    font-size: 21px;
+    line-height: 140%;
+    transform: translateY(-50%);
+    background: var(--background);
+    padding: 0 7px;
+    @media screen and (min-width: 749px) {
+      left: 42px;
+      font-size: 36px;
+
+    }
+  }
+
+  .bottom-text {
+    position: absolute;
+    bottom: 0;
+    color: #AAA;
+    right: 15px;
+    font-size: 21px;
+    line-height: 140%;
+    transform: translateY(50%);
+    background: var(--background);
+    padding: 0 7px;
+    @media screen and (min-width: 749px) {
+      font-size: 36px;
+      right: 30px;
+
+    }
+  }
 
 </style>

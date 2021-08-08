@@ -1,13 +1,21 @@
 <template>
-  <div class="container"></div>
+  <div class="container about-page page">
+      <Description />
+  </div>
 </template>
 
 <script>
+import Description from '../components/Description.vue'
 export default {
-    name: 'About',    
+    name: 'About',
+    components: {
+        Description
+    }  
 }
 </script>
 
-<style>
-
+<style lang="scss">
+    .about-page {
+        
+    }
 </style>
