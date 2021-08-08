@@ -26,6 +26,7 @@ export default {
 
 <style lang="scss">
 footer {
+    border-top: 2px solid #AAAAAA;
     h2 {
         color: #fff;
         font-size: 46px;
