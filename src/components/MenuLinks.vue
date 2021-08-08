@@ -1,9 +1,9 @@
 <template>
   <ul class="menu-links" :class="{mobileHidden: !mobileShow}">
-        <router-link class="link" to="#"><span>H</span>ome</router-link>
-        <router-link class="link" to="#"><span>W</span>orks</router-link>
-        <router-link class="link" to="#"><span>A</span>bout</router-link>
-        <router-link class="link" to="#"><span>C</span>ontact</router-link>
+        <router-link class="link" :to="{name: 'Home'}"><span>H</span>ome</router-link>
+        <router-link class="link" :to="{name: 'Works'}"><span>W</span>orks</router-link>
+        <router-link class="link" :to="{name: 'About'}"><span>A</span>bout</router-link>
+        <router-link class="link" :to="{name: 'Contact'}"><span>C</span>ontact</router-link>
   </ul>
 </template>
 

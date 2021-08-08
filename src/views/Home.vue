@@ -1,6 +1,6 @@
 <template>
   <div class="home-page">
-      <div class="intro">
+      <div class="intro bordered-container">
           <h3>Hello, I am</h3>
           <h2><span>Hang</span> Nguyen</h2>
           <p>A <span>Front-End Web Developer</span> passionate about creating interactive applications and experiences on the web.</p>
@@ -25,13 +25,7 @@ export default {
 
 <style lang="scss">
     .home-page {  
-        padding: 40px 25px;
-        .intro {
-            border: 2px solid #AAA;
-            position: relative;
-            padding: 25px 15px;
-            background: linear-gradient(0deg, rgba(255, 255, 255, 0.24) 0%, rgba(249, 249, 249, 0.2175) 0.01%, rgba(234, 234, 234, 0.152945) 13.54%, rgba(229, 229, 229, 0.133462) 13.55%, rgba(222, 222, 222, 0.107122) 29.68%, rgba(216, 216, 216, 0.0799167) 29.69%, rgba(211, 211, 211, 0.0596295) 45.82%, rgba(205, 205, 205, 0.0361583) 45.83%, rgba(202, 202, 202, 0.0242387) 63.53%, rgba(199, 199, 199, 0.0134659) 63.54%, rgba(197, 197, 197, 0.00299334) 79.17%, rgba(198, 198, 198, 0.00684193) 79.18%, rgba(196, 196, 196, 0) 100%);
-        }
+        padding: 40px 25px;      
         h3 {
             position: absolute;
             top: 0;
@@ -93,13 +87,7 @@ export default {
                 nav {
                     display: none;
                 }
-            }
-            .intro {
-                width: 100%;
-                max-width: 820px;
-                margin: 0 auto;
-                padding: 23px 56px 57px;
-            }
+            }            
             h2 {
                 font-size: 70px;
                 padding-bottom: 14px;
