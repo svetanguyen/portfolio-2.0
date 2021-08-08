@@ -1,24 +1,15 @@
-# portfolio
+# My portfolio
 
-## Project setup
-```
-npm install
-```
+### Hi there! My name is Sveta, I'm a frontend developer, and this is a repo of my portfolio. You can check out some more information about me and some of my works there!
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+---
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Technologies used
 
-### Lints and fixes files
-```
-npm run lint
-```
+* VueJS
+* JS
+* HTML
+* CSS
+* SCSS
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
