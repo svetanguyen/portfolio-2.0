@@ -40,6 +40,11 @@ footer {
                 margin-left: 0;
             }
         }
+        svg {
+            g {
+                filter: none;
+            }
+        }
     }
 
     .copyright {

@@ -68,6 +68,14 @@ export default {
     }    
   }
 
+  .shadowed {
+    filter: drop-shadow(2px 2px 0px #000000);
+    &:hover {
+      filter: none;
+      transform: translate(2px, 2px);
+    }
+  }
+
   .container {
     margin: 0 auto;
     width: 100%;

@@ -5,7 +5,7 @@
           <h2><span>Hang</span> Nguyen</h2>
           <p>A <span>Front-End Web Developer</span> passionate about creating interactive applications and experiences on the web.</p>
           <div class="content-footer">
-            <a href="#"><span>R</span>esumé</a>
+            <a class="shadowed resume" href="#"><span>R</span>esumé</a>
             <SocialIcons />
           </div>
           
@@ -60,15 +60,17 @@ export default {
             span {
                 color: var(--yellow);
             }
-        }
-        a {
+        }       
+        .resume {
             color: #fff;
             display: inline-block;
             background: var(--pink);
             font-size: 36px;
             line-height: 140%;
             width: 100%;
+            height: max-content;
             text-align: center;
+            text-shadow: 2px 2px 0px #000000;
             span {
                 color: var(--yellow);
             }
@@ -80,8 +82,10 @@ export default {
                 padding-bottom: 5px;
                 &:first-child {
                     margin-left: 0;
-                }
+                }               
+
             }
+            
         }       
         @media screen and (min-width: 749px) {
             padding: 140px 50px;
@@ -107,7 +111,7 @@ export default {
                 font-size: 36px;
                 padding-bottom: 56px;
             }
-            a {
+            .resume {
                 width: 239px;
             }
             .content-footer {
