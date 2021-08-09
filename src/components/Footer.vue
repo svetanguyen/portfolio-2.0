@@ -31,6 +31,7 @@ footer {
         color: #fff;
         font-size: 46px;
         line-height: 46px;
+        padding: 25px 25px 19.5px;
     }
 
     .social-icons {
@@ -74,10 +75,7 @@ footer {
             &:first-child {
                 padding: 0;
             }
-        }
-        h2 {
-            padding: 25px 25px 19.5px;
-        }
+        }       
         .social-icons {
             justify-content: center;
 
@@ -101,11 +99,15 @@ footer {
         nav {
             display: flex;
             justify-content: space-between;
-            align-items: center;            
+            align-items: center;      
+            flex-wrap: wrap;      
         }
          .copyright {
             margin-top: 17px;
             padding-bottom: 17px;
+        }
+        h2 {
+            padding: 0;
         }
     }
 

@@ -33,6 +33,7 @@ export default {
 
 <style lang="scss">
     .description {
+        margin-bottom: 40px;
         .column {
             padding: 16px;
             position: relative;
@@ -56,6 +57,7 @@ export default {
            }
         }
         @media screen and (min-width: 749px) {
+            margin-bottom: 85px;
             .column {
                 padding: 58px 56px;
             }
