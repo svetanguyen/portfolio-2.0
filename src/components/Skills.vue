@@ -58,7 +58,6 @@ export default {
 
 <style lang="scss" scoped>
 .skills-wrapper {
-  padding: 0 0 40px;
   h3 {
     color: var(--yellow);
   }
@@ -96,7 +95,7 @@ export default {
     }
   }
   @media screen and (min-width: 749px) {
-    padding: 83px 0 163px;
+    padding: 83px 0 0;
     .bordered-container {
       padding: 55px 55px 0;
     }
