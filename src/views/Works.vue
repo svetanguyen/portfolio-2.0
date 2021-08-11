@@ -13,6 +13,11 @@ export default {
     name: 'Works',
     components: {
       Card
+    },
+    data() {
+      return {
+
+      }
     }
 }
 </script>
@@ -21,4 +26,12 @@ export default {
   .top-text {
     color: var(--yellow);
   }
+  .projects-wrapper {
+    padding: 30px 25px;
+  }
+   @media screen and (min-width: 749px) {
+    .projects-wrapper {
+      padding: 94px 50px 173px;
+    }
+   }
 </style>
