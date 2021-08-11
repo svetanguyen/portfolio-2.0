@@ -2,7 +2,7 @@
   <div class="projects-wrapper">
     <div class="bordered-container">
       <div class="top-text">Projects</div>
-      <Card />
+      <Card :work="work" v-for="(work, index) in projectCards" :key="index" />
     </div>
   </div>
 </template>
@@ -13,6 +13,11 @@ export default {
     name: 'Works',
     components: {
       Card
+    },
+    computed: {
+      projectCards() {
+        return this.$store.state.projectCards
+      },
     },
     data() {
       return {

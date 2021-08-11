@@ -4,7 +4,8 @@
 
 <script>
 export default {
-    name: 'ProjectCard'
+    name: 'ProjectCard',
+    props: ["work"]
 }
 </script>
 
