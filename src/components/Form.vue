@@ -4,10 +4,10 @@
            <h3 class="top-text">Get in touch</h3>
            <h3 class="email">matematikaforeber@gmail.com</h3>
             <SocialIcons />
-          <form action="">
-              <input type="text" id="FullName" placeholder="Full Name" name="FullName">
-              <input type="email" placeholder="Email" name="Email">
-              <textarea name="Message" placeholder="Message" id="Message" cols="30" rows="10"></textarea>
+          <form class="contact-form" @submit.prevent="sendEmail">
+              <input type="text" placeholder="Full Name" name="user_name">
+              <input type="email" placeholder="Email" name="user_email">
+              <textarea name="message" placeholder="Message" cols="30" rows="10"></textarea>
               <button class="shadowed" type="submit"><span>S</span>end a message</button>
           </form>
       </div>
@@ -16,10 +16,29 @@
 
 <script>
 import SocialIcons from './SocialIcons.vue';
+import emailjs from 'emailjs-com';
 export default {
     name: 'Form',
     components: {
         SocialIcons
+    },
+    data() {
+        return {
+            name: '',
+            email: '',
+            message: ''
+        }
+    },    
+     methods: {               
+        sendEmail: (e) => {          
+        emailjs.sendForm('service_h6kpkq8', 'template_4epkp3w', e.target, 'user_7OnLzJ8nHsHkdquvPMSK1')
+            .then((result) => {
+                console.log('SUCCESS!', result.status, result.text);    
+                location.reload();
+            }, (error) => {
+                console.log('FAILED...', error);
+            });
+        }
     }
 }
 </script>
