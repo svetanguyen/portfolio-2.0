@@ -36,7 +36,7 @@ footer {
 
     .social-icons {
         li {
-            margin-left: 30px;
+            margin-left: 20px;
             &:first-child {
                 margin-left: 0;
             }

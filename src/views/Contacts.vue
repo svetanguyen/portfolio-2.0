@@ -1,13 +1,27 @@
 <template>
-  <div></div>
+  <div>
+    <Form />
+  </div>
 </template>
 
 <script>
+import Form from '../components/Form.vue'
 export default {
-    name: 'Contacts'
+    name: 'Contacts',
+    components: {
+      Form
+    }
 }
 </script>
 
-<style>
-
+<style lang="scss">
+  .form-wrapper {
+    .social-icons {
+      li {
+        margin: 0 10px;
+        transform: scale(.8);
+        
+      }
+    }
+  }
 </style>
