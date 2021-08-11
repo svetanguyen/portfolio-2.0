@@ -33,5 +33,9 @@ export default {
     .projects-wrapper {
       padding: 94px 50px 173px;
     }
+    .bordered-container {
+      max-width: 1240px;
+      padding: 118px 107px 96px;
+    }
    }
 </style>
