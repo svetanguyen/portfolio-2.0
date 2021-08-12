@@ -34,6 +34,9 @@ export default {
   .projects-wrapper {
     padding: 30px 25px;
   }
+  .bordered-container {
+    background: none;
+  }
    @media screen and (min-width: 749px) {
     .projects-wrapper {
       padding: 94px 50px 173px;
@@ -41,6 +44,8 @@ export default {
     .bordered-container {
       max-width: 1240px;
       padding: 118px 107px 96px;
-    }
+      display: flex;
+      flex-wrap: wrap;
+    }    
    }
 </style>
