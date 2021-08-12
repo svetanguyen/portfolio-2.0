@@ -39,7 +39,7 @@ footer {
             margin-left: 20px;
             &:first-child {
                 margin-left: 0;
-            }
+            }            
         }
         svg {
             g {
@@ -90,6 +90,18 @@ footer {
         h2 {
             font-size: 49px;
             line-height: 49px;
+        }
+        .social-icons {
+            .shadowed {
+                &:hover {
+                    transform: scale(0.8);
+                    path {
+                        &:not(.inside) {
+                            fill: var(--pink);
+                        }
+                    }
+                }
+            }
         }
        
         

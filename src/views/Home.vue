@@ -58,9 +58,10 @@ export default {
             }
         }
         .social-icons {
-            justify-content: center;
+            justify-content: center;            
             li {
-                margin-left: 31px;
+                margin-left: 21px;
+                transform: scale(.9);
                 padding-bottom: 5px;
                 &:first-child {
                     margin-left: 0;
@@ -89,6 +90,11 @@ export default {
             .content-footer {
                 display: flex;
                 justify-content: space-between;
+            }
+            .social-icons {
+                li {
+                    transform: scale(.8);
+                }
             }
 
         }

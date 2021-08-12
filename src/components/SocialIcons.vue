@@ -38,6 +38,14 @@ export default {
         }
         @media screen and (min-width: 749px) {
             padding: 0;
+            li {
+                transform: scale(.8);
+                &.shadowed {
+                    &:hover {
+                        transform: scale(.8) translate(2px, 2px);
+                    }
+                }
+            }
         }
     }
 </style>
