@@ -82,7 +82,7 @@ form {
     input {
         display: block;
         width: 100%;
-        background: transparent;
+        background: var(--background);
         padding: 7px 5px;
         border: 1.5px solid #AAAAAA;
         font-weight: normal;
@@ -105,7 +105,7 @@ form {
             font-size: 21px;
             margin-bottom: 15px;
             color: #aaa;
-            -webkit-box-shadow: 0 0 0 50px transparent inset;
+            -webkit-box-shadow: 0 0 0 50px var(--background) inset;
              -webkit-background-clip: text !important;
             -webkit-text-fill-color: #aaa !important;
         }
@@ -116,11 +116,14 @@ form {
             opacity: .4;
         }
     }
+    button {
+        border: none;
+    }
     textarea {
         display: block;
         color: #aaa;
         padding: 7px 5px;
-        background: transparent;
+        background: var(--background);
         border: 1.5px solid #AAAAAA;
         width: 100%;
         font-size: 21px;
