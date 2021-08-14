@@ -14,7 +14,7 @@
                 <h3>navigation</h3>
                 <close-icon @click="closeMobileNav" />
             </div>
-            <menuLinks :mobileShow="true" />
+            <menuLinks :mobileShow="true"/>
         </div>
       </transition>
      
@@ -29,8 +29,13 @@ export default {
     name: 'page-header',
     data() {
         return {
-            mobileNav: null,
+            mobileNav: this.$store.state.mobileNav,
         };        
+    },   
+    watch: {
+        '$route' () {
+        this.mobileNav = false
+        }
     },
     components: {
         menuIcon,
