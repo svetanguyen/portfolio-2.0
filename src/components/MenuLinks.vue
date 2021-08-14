@@ -1,16 +1,31 @@
 <template>
   <ul class="menu-links" :class="{mobileHidden: !mobileShow}">
-        <router-link class="link" :to="{name: 'Home'}"><span>H</span>ome</router-link>
-        <router-link class="link" :to="{name: 'Works'}"><span>W</span>orks</router-link>
-        <router-link class="link" :to="{name: 'About'}"><span>A</span>bout</router-link>
-        <router-link class="link" :to="{name: 'Contacts'}"><span>C</span>ontact</router-link>
+        <router-link class="link" @click.native="refreshPage" :to="{name: 'Home'}"><span>H</span>ome</router-link>
+        <router-link class="link" @click.native="refreshPage" :to="{name: 'Works'}"><span>W</span>orks</router-link>
+        <router-link class="link" @click.native="refreshPage" :to="{name: 'About'}"><span>A</span>bout</router-link>
+        <router-link class="link" @click.native="refreshPage" :to="{name: 'Contacts'}"><span>C</span>ontact</router-link>
   </ul>
 </template>
 
 <script>
 export default {
     name: 'menu-links',
-    props: ['mobileShow']
+    props: ['mobileShow'],
+    data() {
+        return {
+            route: this.$route
+        }
+    },
+    methods: {
+        refreshPage() {
+            console.log('lol', this.$route)
+            console.log('not lol', this.route)
+            if (this.$route === this.route) {
+                location.reload()
+            }
+            this.route = this.$route
+        }
+    }
 }
 </script>
 
