@@ -5,8 +5,11 @@
            <h3 class="email">matematikaforeber@gmail.com</h3>
             <SocialIcons />
           <form class="contact-form" @submit.prevent="sendEmail">
+              <div v-show="errorName" class="error error-name">Please enter your name</div>
               <input v-model="name" type="text" placeholder="Full Name" name="name">
+              <div v-show="errorEmail" class="error error-email">Please enter your email</div>
               <input v-model="email" type="email" placeholder="Email" name="email">
+              <div v-show="errorMessage" class="error error-message">Please enter the message</div>
               <textarea v-model="message" name="message" placeholder="Message" cols="30" rows="10"></textarea>
               <button class="shadowed" type="submit"><span>S</span>end a message</button>
           </form>
@@ -20,17 +23,32 @@ import emailjs from 'emailjs-com';
 export default {
     name: 'Form',
     components: {
-        SocialIcons
+        SocialIcons        
     },
     data() {
         return {
             name: '',
             email: '',
-            message: ''
+            message: '',
+            errorName: false,
+            errorEmail: false,
+            errorMessage: false,
         }
     },    
      methods: {               
-        sendEmail: function(e) {          
+        sendEmail: function(e) { 
+            if (!this.name) {
+                this.errorName = true;
+                return
+            }
+            if (!this.email) {
+                this.errorEmail= true;
+                return
+            }                       
+            if (!this.message) {
+                this.errorMessage= true;
+                return
+            }
         emailjs.sendForm('service_h6kpkq8', 'template_4epkp3w', e.target, 'user_7OnLzJ8nHsHkdquvPMSK1', {
             name: this.name,
             email: this.email,
@@ -60,6 +78,11 @@ export default {
         line-height: 21px;
         text-align: center;
     }
+}
+
+.error {
+    padding-bottom: 15px;
+    color: var(--yellow);
 }
 
 button {
