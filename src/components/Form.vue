@@ -37,6 +37,9 @@ export default {
     },    
      methods: {               
         sendEmail: function(e) { 
+            this.errorName = false;
+            this.errorEmail = false;
+            this.errorMessage = false;
             if (!this.name) {
                 this.errorName = true;
                 return
