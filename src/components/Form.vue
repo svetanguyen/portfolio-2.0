@@ -5,9 +5,9 @@
            <h3 class="email">matematikaforeber@gmail.com</h3>
             <SocialIcons />
           <form class="contact-form" @submit.prevent="sendEmail">
-              <input type="text" placeholder="Full Name" name="user_name">
-              <input type="email" placeholder="Email" name="user_email">
-              <textarea name="message" placeholder="Message" cols="30" rows="10"></textarea>
+              <input v-model="name" type="text" placeholder="Full Name" name="name">
+              <input v-model="email" type="email" placeholder="Email" name="email">
+              <textarea v-model="message" name="message" placeholder="Message" cols="30" rows="10"></textarea>
               <button class="shadowed" type="submit"><span>S</span>end a message</button>
           </form>
       </div>
@@ -30,11 +30,18 @@ export default {
         }
     },    
      methods: {               
-        sendEmail: (e) => {          
-        emailjs.sendForm('service_h6kpkq8', 'template_4epkp3w', e.target, 'user_7OnLzJ8nHsHkdquvPMSK1')
+        sendEmail: function(e) {          
+        emailjs.sendForm('service_h6kpkq8', 'template_4epkp3w', e.target, 'user_7OnLzJ8nHsHkdquvPMSK1', {
+            name: this.name,
+            email: this.email,
+            message: this.message
+        })
             .then((result) => {
+                console.log('result', result)
                 console.log('SUCCESS!', result.status, result.text);    
-                location.reload();
+                this.name = '';
+                this.email = '';
+                this.message = '';
             }, (error) => {
                 console.log('FAILED...', error);
             });
