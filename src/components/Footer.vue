@@ -60,7 +60,6 @@ footer {
     }
 
     svg {
-        transform: scale(.7);
         path {
             fill: #fff;
         }

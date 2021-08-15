@@ -34,7 +34,8 @@ export default {
         color: #fff;
         font-size: 36px;
         line-height: 36px;
-        background: var(--background);                       
+        background: var(--background);   
+        margin: 0 -22px 0 -20px;                    
     }    
 
     .link {
