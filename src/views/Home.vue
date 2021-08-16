@@ -5,7 +5,7 @@
           <h2><span>Hang</span> Nguyen</h2>
           <p>A <span>Front-End Web Developer</span> passionate about creating interactive applications and experiences on the web.</p>
           <div class="content-footer">
-            <a class="shadowed resume" href="#"><span>R</span>esumé</a>
+            <a class="shadowed resume" target="_blank" :href="resumeLink"><span>R</span>esumé</a>
             <SocialIcons />
           </div>
           
@@ -19,6 +19,11 @@ export default {
     name: 'Home',
     components: {
         SocialIcons
+    },
+    data() {
+        return {
+            resumeLink: 'https://drive.google.com/file/d/1J9qelECu9BQuFEZQj3z-VP8T4y5FaOtT/view?usp=sharing'
+        }
     }
 }
 </script>
