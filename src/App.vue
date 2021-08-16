@@ -72,10 +72,11 @@ export default {
     filter: drop-shadow(2px 2px 0px #000000);
     &:hover {
       transform: translate(2px, 2px);
+      filter: none;
 
     }
     &li:hover {
-      filter: none;
+      filter: none;      
       transform: scale(0.9) translate(2px, 2px);
     }
   }
