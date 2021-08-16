@@ -94,6 +94,10 @@ export default {
             .social-icons {
                 li {
                     transform: scale(.8);
+                    &:hover {
+                        transform: scale(.8) translate(2px, 2px);
+
+                    }
                 }
             }
 

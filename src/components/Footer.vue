@@ -92,8 +92,10 @@ footer {
         }
         .social-icons {
             .shadowed {
-                &:hover {
-                    transform: scale(0.8);
+                &:hover {                    
+                   
+                        transform: scale(.6) translate(2px, 2px);                    
+                
                     path {
                         &:not(.inside) {
                             fill: var(--pink);

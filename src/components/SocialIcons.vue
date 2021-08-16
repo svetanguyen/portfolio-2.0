@@ -40,12 +40,7 @@ export default {
             padding: 0;
             li {
                 transform: scale(.6);
-                transform-origin: 100% 50%;
-                &.shadowed {
-                    &:hover {
-                        transform: scale(.6) translate(2px, 2px);
-                    }
-                }
+                transform-origin: 100% 50%;                
             }
         }
     }
