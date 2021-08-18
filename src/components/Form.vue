@@ -13,17 +13,34 @@
               <textarea v-model="message" name="message" placeholder="Message" cols="30" rows="10"></textarea>
               <button class="shadowed" type="submit"><span>S</span>end a message</button>
           </form>
+          <div class="success-message" v-show="sentSuccessfully">
+              <header>
+                  <div class="text">
+                    <img :src="require(`../assets/images/heart.png`)" alt="heart">
+                    <p>sveta_notification.exe</p>
+                  </div>
+                  <closeIcon class="icon" @click="closeWindow" />
+                  
+              </header>
+              <div class="content">
+                  <h2>Congratulations</h2>
+                  <p>Message was sent successfully</p>
+                  <button @click="closeWindow"><span>O</span>kay</button>
+              </div>
+          </div>
       </div>
   </div>
 </template>
 
 <script>
 import SocialIcons from './SocialIcons.vue';
+import closeIcon from '../assets/icons/close-window.svg';
 import emailjs from 'emailjs-com';
 export default {
     name: 'Form',
     components: {
-        SocialIcons        
+        SocialIcons,
+        closeIcon       
     },
     data() {
         return {
@@ -33,6 +50,7 @@ export default {
             errorName: false,
             errorEmail: false,
             errorMessage: false,
+            sentSuccessfully: false
         }
     },    
      methods: {               
@@ -59,13 +77,17 @@ export default {
         })
             .then((result) => {
                 console.log('result', result)
-                console.log('SUCCESS!', result.status, result.text);    
+                console.log('SUCCESS!', result.status, result.text);   
+                this.sentSuccessfully = true; 
                 this.name = '';
                 this.email = '';
                 this.message = '';
             }, (error) => {
                 console.log('FAILED...', error);
             });
+        },
+        closeWindow: function() {
+            this.sentSuccessfully = false;
         }
     }
 }
@@ -81,6 +103,62 @@ export default {
         line-height: 21px;
         text-align: center;
     }
+}
+
+.success-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    color: #E6E6E6;
+    font-size: 32px;
+    line-height: 32px;    
+    header {
+        display: flex;
+        padding: 7px 7px 7px 12px;
+        height: 45px;
+        justify-content: space-between;
+        background: #010180;
+        border: 1px solid #C0C1BE;
+        box-shadow: inset -2px -2px 0px #000000, inset 2px 2px 0px #FFFFFF, inset -4px -4px 0px #717171, inset 4px 4px 0px rgba(255, 255, 255, 0.4);
+    }
+    .text {
+        display: flex;
+        align-items: flex-end;
+    }
+    .icon {
+        max-height: 100%;
+    }
+    .content {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #C4C4C4;
+        border: 1px solid #C0C1BE;
+        text-align: center;
+        padding: 57px 20px 36px;
+        box-shadow: inset -2px -2px 0px #000000, inset 2px 2px 0px #FFFFFF, inset -4px -4px 0px #717171, inset 4px 4px 0px rgba(255, 255, 255, 0.4);
+        p {
+            font-size: 38px;
+            line-height: 38px;
+            margin-bottom: 63px;
+            color: #FFF;
+        }
+    }
+    button {
+        max-width: 163px;
+        box-shadow: 2px 2px 0px #000000;
+        &:hover,
+        &:focus {
+            box-shadow: none;
+            transform: translate(2px, 2px);
+        }
+    }
+    h2 {
+        font-size: 57px;
+        line-height: 57px;
+        color: #fff;
+        margin-bottom: 15px;
+    }
+    
 }
 
 .error {
@@ -215,6 +293,10 @@ form {
                 line-height: 36px;
             }
         }
+    }
+    .success-message {
+        max-width: 754px;
+        width: 100%;
     }
 }
 </style>
