@@ -93,7 +93,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
 .form-wrapper {
     padding: 40px 25px;
@@ -103,6 +103,21 @@ export default {
         line-height: 21px;
         text-align: center;
     }
+    
+    .social-icons {
+        justify-content: center;
+        padding-top: 17px;
+        .shadowed {
+            &:hover {
+                transform: translate(2px, 2px) scale(.8);
+            }
+        }
+    }    
+    .error {
+        padding-bottom: 15px;
+        color: var(--yellow);
+    }
+
 }
 
 .success-message {
@@ -161,10 +176,6 @@ export default {
     
 }
 
-.error {
-    padding-bottom: 15px;
-    color: var(--yellow);
-}
 
 button {
     display: inline-block;
@@ -182,11 +193,6 @@ button {
     }
 }
 
-.social-icons {
-    justify-content: center;
-    padding-top: 17px;
-    
-}
 
 form {
     padding-top: 26px;
@@ -255,7 +261,8 @@ form {
 }
 
 @media screen and (min-width: 749px) {
-    .email {
+    .form-wrapper {
+.email {
         font-size: 36px;
         line-height: 36px;
     }
@@ -298,5 +305,7 @@ form {
         max-width: 754px;
         width: 100%;
     }
+    }
+    
 }
 </style>
