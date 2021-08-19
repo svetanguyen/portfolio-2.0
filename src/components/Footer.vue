@@ -76,12 +76,15 @@ footer {
             }
         }       
         .social-icons {
-            justify-content: center;
+            justify-content: center;            
 
         }
         .container {
             .menu-links {
                 margin: 0;
+                a {
+                    padding-left: 25px;
+                }
             }}
         
     }
