@@ -79,6 +79,10 @@ footer {
             justify-content: center;
 
         }
+        .container {
+            .menu-links {
+                margin: 0;
+            }}
         
     }
     
@@ -132,10 +136,11 @@ footer {
         }
         .container {
             .menu-links {
+                margin: 0;
                 .link {
                     display: block;
                     margin: 0;
-                }
+                }                
             }
         }
         
