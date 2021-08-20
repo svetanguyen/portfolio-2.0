@@ -136,7 +136,8 @@ export default {
     font-size: 21px;
     line-height: 140%;
     transform: translateY(-50%);
-    width: fit-content;
+    min-width: max-content;
+    white-space: nowrap;
     background: var(--background);
     padding: 0 7px;
     @media screen and (min-width: 749px) {
