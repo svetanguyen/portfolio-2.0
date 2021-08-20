@@ -7,7 +7,7 @@
       </nav>
       <div class="copyright container">
           <p>© Hang Nguyen 2021</p>
-          <p>Design: Tin Bui</p>
+          <p><a target="_blank" href="https://www.behance.net/mishadistin">Design: Tin Bui</a></p>
       </div>
   </footer>
 </template>
@@ -56,6 +56,9 @@ footer {
         color: #AAA;
         margin-top: 31px;
         padding-bottom: 20px;
+        a {
+            color: #AAA;
+        }
 
     }
 
