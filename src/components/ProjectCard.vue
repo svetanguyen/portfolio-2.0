@@ -56,7 +56,7 @@ export default {
       line-height: 1;
     }
     .description {
-      font-size: 36px;
+      font-size: 31px;
       line-height: 50.4px;
     }
     .scale {
