@@ -2,7 +2,7 @@
   <div class="header-wrapper">
       <header class="container">
         <nav class="desktop-nav">
-           <h1>Sveta</h1>
+           <h1><router-link :to="{name: 'Home'}">Sveta</router-link></h1>
            <menu-links :mobileShow="false" />
         </nav>
         <menu-icon @click="toggleMobileNav" class="menu-icon" />
@@ -73,6 +73,9 @@ export default {
             color: #fff;
             font-size: 46px;
             line-height: 46px;
+            a {
+                color: #fff;
+            }
         }        
 
        
