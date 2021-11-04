@@ -43,6 +43,15 @@ export default {
                 align-items: center;
                 z-index: 1;
                 justify-content: center;
+                height: 400px;
+            }
+
+            .img-wrapper {
+                height: 100%;
+                img {
+                    height: 100%;
+                    object-fit: contain;
+                }
             }
         }
         img {
@@ -60,6 +69,16 @@ export default {
             margin-bottom: 85px;
             .column {
                 padding: 58px 56px;
+                &:first-child {
+                    height: auto; 
+                }
+
+                .img-wrapper {
+                    height: 100%;
+                    img {
+                        height: auto;
+                    }
+                }
             }
             .text-wrapper {
                 font-size: 36px;               
