@@ -125,6 +125,7 @@ export default {
     padding: 40px 25px;
     @media screen and (min-width: 749px) {
       padding: 140px 50px;
+      min-height: calc(100vh - 113px);
     }
   }
 
