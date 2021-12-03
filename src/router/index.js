@@ -49,7 +49,7 @@ const router = new VueRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  document.title = `${to.meta.title} | Fireblog`;
+  document.title = `${to.meta.title} | Portfolio`;
   next();
 })
 
