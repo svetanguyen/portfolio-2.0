@@ -2,7 +2,7 @@
   <div class="form-wrapper">
       <div class="bordered-container">
            <h3 class="top-text">Get in touch</h3>
-           <h3 class="email">matematikaforeber@gmail.com</h3>
+           <h3 class="email">matematicaforeber@gmail.com</h3>
             <SocialIcons />
           <form class="contact-form" @submit.prevent="sendEmail">
               <div v-show="errorName" class="error error-name">Please enter your name</div>
