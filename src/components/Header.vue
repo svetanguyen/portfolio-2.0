@@ -58,6 +58,7 @@ export default {
         border-bottom: 2px solid var(--gray);
         padding-top: 5px;
         padding-bottom: 6px;
+        background: var(--pink-100);
         header {
             display: flex;
             justify-content: space-between;
@@ -74,7 +75,7 @@ export default {
             font-size: 46px;
             line-height: 46px;
             a {
-                color: #fff;
+                color: #000;
             }
         }        
 
@@ -126,8 +127,9 @@ export default {
             padding-top: 0;
             padding-bottom: 0;                     
             h1 {
-                font-size: 49px;
-                line-height: 49px;
+                font-size: 65px;
+                line-height: 65px;
+                padding: 12px 0;
             }
             .menu-icon {
                 display: none;
