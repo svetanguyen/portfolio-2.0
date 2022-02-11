@@ -1,9 +1,9 @@
 <template>
   <ul class="menu-links" :class="{mobileHidden: !mobileShow}">
-        <router-link class="link" @click.native="refreshPage" :to="{name: 'Home'}"><span>H</span>ome</router-link>
-        <router-link class="link" @click.native="refreshPage" :to="{name: 'Works'}"><span>W</span>orks</router-link>
-        <router-link class="link" @click.native="refreshPage" :to="{name: 'About'}"><span>A</span>bout</router-link>
-        <router-link class="link" @click.native="refreshPage" :to="{name: 'Contacts'}"><span>C</span>ontact</router-link>
+        <router-link class="link" @click.native="refreshPage" :to="{name: 'Home'}">Home</router-link>
+        <router-link class="link" @click.native="refreshPage" :to="{name: 'Works'}">Works</router-link>
+        <router-link class="link" @click.native="refreshPage" :to="{name: 'About'}">About</router-link>
+        <router-link class="link" @click.native="refreshPage" :to="{name: 'Contacts'}">Contact</router-link>
   </ul>
 </template>
 
@@ -32,9 +32,9 @@ export default {
 <style lang="scss" scoped>
     .menu-links {
         color: #fff;
-        font-size: 36px;
-        line-height: 36px;
-        background: var(--background);   
+        font-size: 20px;
+        line-height: 20px;
+        color: #000;
         margin: 0 -22px 0 -20px;                    
     }    
 

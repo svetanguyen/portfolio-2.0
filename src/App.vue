@@ -23,6 +23,8 @@ export default {
   :root {
     --pink: #F31D9E; 
     --pink-light: #FF73D4;
+    --pink-100: #F9CBD5;
+    --pink-gradient: linear-gradient(180deg, #C273ED 0%, #F1A6E2 78.96%, #FEB4DF 100%);
     --yellow: #F4ED46;
     --gray: #AAA;
     --background: #212121;
@@ -58,7 +60,7 @@ export default {
   }
 
   body {
-    background: var(--background);
+    background: var(--pink-gradient);
   }
 
   .mobileHidden {
